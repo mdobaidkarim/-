@@ -39,5 +39,13 @@
   <footer class="bg-blue-900 text-white text-center py-6 mt-20">
     <p>&copy; 2025 Obaid & Co. All rights reserved.</p>
   </footer>
+  <script>
+  const currentPage = location.pathname.split("/").pop();
+  document.querySelectorAll('a.nav-link').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('font-bold', 'text-blue-700');
+    }
+  });
+</script>
 </body>
 </html>
